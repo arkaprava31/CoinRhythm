@@ -15,7 +15,7 @@ function App() {
     getTransactions().then(setTransactions);
   };
 
-  const deps = []
+  const deps = [""]
   useEffect(effect, deps);
 
   async function getTransactions() {
