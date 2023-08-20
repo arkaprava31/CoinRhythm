@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 
-const transurl = process.env.REACT_APP_API;
+// const transurl = process.env.REACT_APP_API;
 
 
 function App() {
@@ -19,14 +19,14 @@ function App() {
   useEffect(effect, deps);
 
   async function getTransactions() {
-    const transURL = transurl + "/transactions";
+    const transURL = "http://localhost:4040/api" + "/transactions";
     const response = await fetch(transURL);
     return await response.json();
   }
 
   function addValue(x) {
     x.preventDefault();
-    const url = transurl + "/transaction";
+    const url = "http://localhost:4040/api" + "/transaction";
     console.log(url);
 
     const value = { price, name, description, date };
