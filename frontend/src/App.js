@@ -19,24 +19,21 @@ function App() {
   useEffect(effect, deps);
 
   async function getTransactions() {
-    const transURL = "http://localhost:4040/api" + "/transactions";
+    const transURL = "http://localhost:4040/api/transactions";
     const response = await fetch(transURL);
     return await response.json();
   }
 
   function addValue(x) {
     x.preventDefault();
-    const url = "http://localhost:4040/api" + "/transaction";
-    console.log(url);
-
+    const url = "http://localhost:4040/api/transaction";
     const value = { price, name, description, date };
     const init = {
       method: 'POST',
       headers: { 'Content-type': 'application/json' },
       body: JSON.stringify(value)
     };
-    fetch(url, init).
-      then(res => {
+    fetch(url, init).then(res => {
         res.json().then(json => {
 
           setName('');
@@ -57,7 +54,7 @@ function App() {
   return (
     <main>
       <div className='mainsec'>
-      <div className='app-name'><h1>Coin Rhythm</h1></div>
+        <div className='app-name'><h1>Coin Rhythm</h1></div>
         <h1>Rs {balance}<span>.00</span></h1>
         <form onSubmit={addValue}>
           <div className='basic'>
