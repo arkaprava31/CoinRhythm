@@ -20,8 +20,6 @@ app.get("/api/transaction", (req, res)=>{
     res.json({body:"transaction ok"});
 });
 
-const MONGO_URL = "mongodb+srv://money:JtmYCXXlCQYQvVCv@cluster0.ufvfcoz.mongodb.net/?retryWrites=true&w=majority";
-
 const mongo = process.env.MONGO_URL;
 
 app.post(path, async (req, res)=>{
@@ -35,8 +33,7 @@ app.post(path, async (req, res)=>{
 });
 
 app.get("/api/transactions", async(req, res)=>{
-    await mongoose.connect(MONGO_URL);
-    // await mongoose.connect(mongo);
+    await mongoose.connect(mongo);
     const transactions = await Transaction.find();
 
     res.json(transactions);
@@ -47,5 +44,3 @@ app.listen(port, ()=>{
     console.log("Starting at port 4040")
 });
 
-
-//JtmYCXXlCQYQvVCv
