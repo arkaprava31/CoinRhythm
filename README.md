@@ -1,10 +1,10 @@
 # CoinRhythm
 
-Our MERN (MongoDB, Express.js, React, Node.js) stack project, CoinRhythm, offers an efficient and user-friendly solution for tracking daily money expenses.
+This MERN (MongoDB, Express.js, React, Node.js) stack project, CoinRhythm, offers an efficient and user-friendly solution for tracking daily money expenses.
 
 ## Link to the Website
 
-[CoinRhythm](https://subtle-banoffee-970bf8.netlify.app/)
+[CoinRhythm](https://coinrhythm.netlify.app/)
 
 ## Contributing
 
